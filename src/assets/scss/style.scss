@@ -1,0 +1,14 @@
+@import './misc/misc.scss';
+@import './mixins/mixins.scss';
+@import './layout/layout.scss';
+@import './index.scss';
+@import './footer.scss';
+
+body,html {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}

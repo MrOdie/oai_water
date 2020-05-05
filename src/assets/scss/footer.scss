@@ -1,0 +1,21 @@
+footer {
+  color: $white;
+  background-color: map-get($oai-pallet, color3);
+  padding: 40px 0;
+  .container {
+    grid-column: 2;
+    .row {
+      .col {
+        h4 {
+          &.h1 {
+            margin: 0;
+          }
+        }
+        .info {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
