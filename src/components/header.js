@@ -22,17 +22,27 @@ class Header extends React.PureComponent {
         <nav className="nav-links">
           <ul>
             <li className="nav-link">
-              <Link to="/">
-                Qualifications
+              <Link activeClassName="active" to="/about">
+                About
              </Link>
             </li>
             <li className="nav-link">
-              <Link to="/">
-                Experience
+              <Link activeClassName="active" to="/research">
+                Research
             </Link>
             </li>
             <li className="nav-link">
-              <Link to="/">
+              <Link activeClassName="active" to="/development">
+                Development
+            </Link>
+            </li>
+            <li className="nav-link">
+              <Link activeClassName="active" to="/management">
+                Management
+            </Link>
+            </li>
+            <li className="nav-link">
+              <Link activeClassName="active" to="/contact">
                 Contact
             </Link>
             </li>

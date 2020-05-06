@@ -14,28 +14,43 @@ main {
   section {
     display: grid;
 
+    .container {
+      grid-column: 2;
+    }
+
     &.intro,
     &.sub {
       @include breakpoints(really_big large desktop sm_desktop) {
         grid-template-columns: auto 900px auto;
       }
 
-      @include breakpoints(sm_desktop lg_tablet) {
-        grid-template-columns: auto 750px auto;
-      }
-
-      @include breakpoints(tablet nav mobile) {
-        grid-template-columns: 15px auto 15px;
+      @include breakpoints(sm_desktop lg_tablet tablet nav mobile) {
+        grid-template-columns: 1fr 4fr 1fr;
       }
     }
 
     &.sub {
-      margin: 100px auto;
+      margin: 70px auto;
     }
 
   }
 
 }
+
+.about {
+  main {
+    section {
+      @include breakpoints(really_big large desktop sm_desktop){
+        margin: 70px auto;
+      }
+      @include breakpoints(lg_tablet tablet nav mobile){
+        margin: 50px auto;
+      }
+    }
+  }
+}
+
+
 
 footer {
   grid-area: footer;
@@ -46,12 +61,11 @@ footer {
     grid-template-columns: auto 900px auto;
   }
 
-  @include breakpoints(sm_desktop lg_tablet) {
-    grid-template-columns: auto 750px auto;
+  @include breakpoints(sm_desktop lg_tablet tablet nav mobile) {
+    grid-template-columns: 1fr 4fr 1fr;
   }
 
   @include breakpoints(tablet nav mobile) {
     max-width: 768px;
-    grid-template-columns: 15px auto 15px;
   }
 }

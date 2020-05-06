@@ -12,11 +12,11 @@ import "../assets/scss/style.scss"
 import Header from "./header"
 import Footer from "./footer"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, page }) => {
 
   return (
     <>
-    <div id="body">
+    <div class={page} id="body">
       <Header/>
       <main >{children}</main>
       <Footer/>

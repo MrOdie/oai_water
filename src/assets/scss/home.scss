@@ -1,0 +1,91 @@
+.home {
+  .intro {
+    background: url("../images/cave_water.jpg");
+    height: 100vh;
+    position: relative;
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .row {
+        .col {
+          hr {
+            width: 15%;
+            height: 0.35rem;
+            background-color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .sub {
+    .container {
+      grid-column-start: 2;
+    }
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 350px);
+    gap: 0.5rem 0.5rem;
+    background-color: $white;
+
+    .grid-item {
+      justify-self: stretch;
+      align-self: stretch;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: transparent;
+      text-decoration: none;
+
+      .inner-item {
+        transition: opacity 0.5s linear;
+        opacity: 0;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        &.unus,
+        &.quot {
+          background: map-get($oai-pallet, color5);
+          color: $white;
+        }
+
+        &.duo,
+        &.tres {
+          background: map-get($oai-pallet, color2);
+          color: $white;
+        }
+        .inner-item {
+          opacity: 1;
+        }
+      }
+
+      &.unus {
+        background: url("../images/research.jpg") no-repeat center/cover;
+      }
+
+      &.duo {
+        background: url("../images/development.jpg") no-repeat center/cover;
+      }
+
+      &.tres {
+        background: url("../images/management.jpg") no-repeat center/cover;
+      }
+
+      &.quot {
+        background: url("../images/image39.jpg") no-repeat center/cover;
+      }
+
+      h3 {
+        margin-top: 0;
+      }
+    }
+  }
+}
