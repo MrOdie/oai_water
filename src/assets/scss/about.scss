@@ -1,0 +1,22 @@
+.about {
+  section {
+    &.sub__multi {
+      background-color: map-get($oai-pallet, color3);
+      color: $white;
+      padding: 30px 0;
+    }
+    .container {
+      .row {
+        .col {
+          &__left,
+          &__right {
+            .personnel__img {
+              max-width: 350px;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

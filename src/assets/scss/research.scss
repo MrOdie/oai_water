@@ -1,0 +1,44 @@
+input[type="checkbox"] {
+  display: none;
+}
+
+.accordion__label {
+  display: block;
+  background-color: map-get($oai-pallet, color3);
+  color: $white;
+  padding: 1.5rem 0rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+input:checked ~ .accordion__content {
+  display: none;
+}
+
+.accordion__content {
+  background-color: map-get($oai-pallet, color5);
+  padding: 2rem;
+  margin-top: -5px;
+  color: $white;
+  border-radius: 0 0 5px 5px;
+  animation: slide .3s forwards;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  50% {
+    opacity: .5;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

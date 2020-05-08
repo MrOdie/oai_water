@@ -16,7 +16,7 @@ const Layout = ({ children, page }) => {
 
   return (
     <>
-    <div class={page} id="body">
+    <div className={page} id="body">
       <Header/>
       <main >{children}</main>
       <Footer/>

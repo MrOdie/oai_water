@@ -23,7 +23,7 @@ const IndexPage = () => (
         </div>
       </div>
     </section>
-    <section className="sub">
+    <section className="sub__single">
       <div className="container">
         <div className="row">
           <div className="col">
