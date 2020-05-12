@@ -20,6 +20,10 @@ main {
       grid-template-columns: 1fr 4fr 1fr;
     }
 
+    &.intro {
+    padding-top: 75px;
+    }
+
     &.sub__single {
       background-color: $white;
     }
@@ -74,18 +78,13 @@ main {
   }
 }
 
-// .about {
-//   main {
-//     section {
-//       @include breakpoints(really_big large desktop sm_desktop) {
-//         margin: 0px auto;
-//       }
-//       @include breakpoints(lg_tablet tablet nav mobile) {
-//         margin: 0px auto;
-//       }
-//     }
-//   }
-// }
+.home {
+  main {
+    .intro {
+      padding-top: 0
+    }
+  }
+}
 
 footer {
   grid-area: footer;

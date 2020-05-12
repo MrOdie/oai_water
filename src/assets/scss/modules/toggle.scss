@@ -1,0 +1,39 @@
+.toggle {
+  &__content {
+    border: 1px solid $text;
+  }
+  &__nav {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    border-bottom: 1px solid $text;
+    li:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+  &__title {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    flex-grow: 1;
+    text-align: center;
+    &.active,
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $text;
+      color: $white;
+    }
+  }
+
+  &__body {
+    display: none;
+
+    &.visible {
+      padding: 2rem;
+      display: block;
+    }
+  }
+}

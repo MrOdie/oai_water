@@ -10,6 +10,7 @@
   transition: 0.4s ease-out;
   background: map-get($oai-pallet, color3);
   opacity: 0.98;
+  z-index: 10;
 
   @include breakpoints(really_big large desktop tablet nav mobile) {
     padding: 0 10vw;

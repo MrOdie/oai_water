@@ -62,7 +62,11 @@ h6 {
 .p,
 p,
 li,
-a {
+a,
+label,
+blockquote,
+figure,
+figcaption {
   @extend %p;
 }
 
@@ -80,4 +84,11 @@ a {
 
 .text-uppercase {
   text-transform: capitalize;
+}
+
+main {
+  li:not(:last-child) {
+    
+    margin-bottom: 1rem;
+  }
 }
