@@ -63,7 +63,7 @@ const AboutPage = () => (
             <h4 className="h2">Qualifications and Experience</h4>
             <p>When one looks at a company's "qualifications and experience", it is important to look beyond the mere website postings or company brochures and focus on the actual personnel on hand at the company who will be performing the work and ask yourself: Do they have the qualifications and experience?  At OAI, our qualifications and experience are one and the same with the people who will be working your project. That said, we will start our qualifications by listing Project Experience directly associated with OAI's current staff.</p>
             <h5 className="h3">Project Experience</h5>
-            <ul>
+            <ul className="list">
               <li>Hydrogeologic studies (85)</li>
               <li>Aquifer Tests (77 aquifer tests and 17 pumping tests)</li>
               <li>PSW Wells premitted (84 with combined production capacity of 20,740 gpm)</li>
@@ -77,13 +77,13 @@ const AboutPage = () => (
             </ul>
 
             <h5 className="h3">Education</h5>
-            <ul>
+            <ul className="list">
               <li>BS, Geology, Auburn University (1979)</li>
               <li>Practical Approaches to Ground-water Hydrology and Contamination*, Oklahoma State University (1990)</li>
             </ul>
             <p><small>*Seven week graduate level hydrogeology program</small></p>
             <h5 className="h3">Registrations</h5>
-            <ul>
+            <ul className="list">
               <li>State of Arkansas, Professional Geologist #1184</li>
               <li>State of Florida, Professional Geologist #1798</li>
               <li>State of Iowa, Groundwater Professional #1124 (1991-1993)</li>
@@ -93,7 +93,7 @@ const AboutPage = () => (
               <li>Florida Department of Transportation, WQIE #91</li>
             </ul>
             <h5 className="h3">Training</h5>
-            <ul>
+            <ul className="list">
               <li>Texas Board of Professional Geoscientists Ethics Video &amp; Quiz - Passed</li>
               <li>The Analyst/Schlumberger Mud Logging Training (160 hours)</li>
               <li>40-hour Hazardous Material Worker Site Safety OSHA 29 CFR 1910.120</li>

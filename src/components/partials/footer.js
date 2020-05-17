@@ -12,11 +12,16 @@ const Footer = () => (
       <div className="row">
         <div className="col text-center">
           <h4 className="h1">O'Donnell &amp; Associates, Inc</h4>
-          <p><small>est. 1999</small></p>
+          <p><small>EST. 1999</small></p>
+          <div className="address">
+            <p>600 Bel Air Boulevard Suite 130</p>
+            <p>Mobile AL 36606</p>
+            <p><a href="tel:2512855945">(251) 285-5945</a></p>
+          </div>
           <div className="info">
-          <FontAwesomeIcon className="fa-2x" icon={faFacebook} ></FontAwesomeIcon>
-          <FontAwesomeIcon className="fa-2x" icon={faLinkedin} ></FontAwesomeIcon>
-          <FontAwesomeIcon className="fa-2x" icon={faInbox} ></FontAwesomeIcon>
+            <FontAwesomeIcon className="fa-2x" icon={faFacebook} ></FontAwesomeIcon>
+            <FontAwesomeIcon className="fa-2x" icon={faLinkedin} ></FontAwesomeIcon>
+            <FontAwesomeIcon className="fa-2x" icon={faInbox} ></FontAwesomeIcon>
 
           </div>
         </div>

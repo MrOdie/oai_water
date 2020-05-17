@@ -9,8 +9,8 @@ import React from "react"
 import "../assets/font/typography.css"
 import "../assets/scss/style.scss"
 
-import Header from "./header"
-import Footer from "./footer"
+import Header from "./partials/header"
+import Footer from "./partials/footer"
 
 const Layout = ({ children, page }) => {
 

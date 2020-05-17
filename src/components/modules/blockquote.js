@@ -1,6 +1,6 @@
 import React from 'react'
 
-import classes from '../assets/scss/modules/blockquote.module.scss'
+import classes from '../../assets/scss/modules/blockquote.module.scss'
 
 const blockquote = (props) => {
   return (

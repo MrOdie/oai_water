@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
-import { header } from '../assets/js/header'
-import logo from "../assets/images/logo.png"
+import { header } from '../../assets/js/header'
+import logo from "../../assets/images/logo.png";
 import React from "react"
 
 class Header extends React.PureComponent {
@@ -29,6 +29,11 @@ class Header extends React.PureComponent {
             <li className="nav-link">
               <Link activeClassName="active" to="/research">
                 Research
+            </Link>
+            </li>
+            <li className="nav-link">
+              <Link activeClassName="active" to="/exploration">
+                Exploration
             </Link>
             </li>
             <li className="nav-link">

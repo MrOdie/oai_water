@@ -59,6 +59,11 @@ h5 {
 h6 {
   @extend %h6;
 }
+
+a {
+  color: $text;
+}
+
 .p,
 p,
 li,
@@ -70,7 +75,12 @@ figcaption {
   @extend %p;
 }
 
-.col > h1, h2, h3, h4, h5, h6 {
+.col > h1:first-child,
+.col > h2:first-child,
+.col > h3:first-child,
+.col > h4:first-child,
+.col > h5:first-child,
+.col > h6:first-child {
   margin-top: 0;
 }
 
@@ -87,8 +97,16 @@ figcaption {
 }
 
 main {
-  li:not(:last-child) {
-    
-    margin-bottom: 1rem;
+  .list {
+    li:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    &.double {
+      @include breakpoints(really_big large desktop sm_desktop lg_tablet) {
+        column-count: 2;
+        column-gap: 2rem;
+      }
+    }
   }
 }

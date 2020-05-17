@@ -14,7 +14,7 @@
           hr {
             width: 15%;
             height: 0.35rem;
-            background-color: $white;
+            background-color: $alt-white;
           }
         }
       }
@@ -31,7 +31,9 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2, 350px);
     gap: 0.5rem 0.5rem;
-    background-color: $white;
+    background-color: $alt-white;
+    border-top: .5rem solid $alt-white;
+    border-bottom: .5rem solid $alt-white;
 
     .grid-item {
       justify-self: stretch;
@@ -53,14 +55,14 @@
       &:active {
         &.unus,
         &.quot {
-          background: map-get($oai-pallet, color5);
-          color: $white;
+          background: map-get($oai-pallet, color4);
+          color: $alt-white;
         }
 
         &.duo,
         &.tres {
-          background: map-get($oai-pallet, color2);
-          color: $white;
+          background: map-get($oai-pallet, color1);
+          color: $alt-white;
         }
         .inner-item {
           opacity: 1;

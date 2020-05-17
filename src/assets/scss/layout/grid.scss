@@ -5,6 +5,7 @@
     "body" "body" "body"
     "footer" "footer" "footer";
   grid-template-rows: 0px auto auto;
+  background-color: $alt-white;
 }
 
 main {
@@ -17,15 +18,16 @@ main {
       grid-template-columns: 1fr 8fr 1fr;
     }
     @include breakpoints(nav mobile) {
-      grid-template-columns: 1fr 4fr 1fr;
-    }
-
-    &.intro {
-    padding-top: 75px;
+      grid-template-columns: 1fr 15fr 1fr;
     }
 
     &.sub__single {
-      background-color: $white;
+      &:nth-child(odd) {
+        background-color: $alt-white;
+      }
+      &:nth-child(even) {
+        background-color: $white;
+      }
     }
 
     .container {
@@ -34,10 +36,9 @@ main {
 
       .row {
         display: grid;
-        gap: 2rem;
         align-items: center;
         justify-items: center;
-        
+
         @include breakpoints(really_big large desktop sm_desktop) {
           grid-template-columns: 1fr 1fr;
           margin: 70px auto;
@@ -75,13 +76,26 @@ main {
         max-width: 750px;
       }
     }
+
+    &.intro {
+      @include breakpoints(really_big large desktop) {
+        padding-top: 75px;
+      }
+    }
+    &.sub__mult {
+      .container {
+        .row {
+          gap: 2em;
+        }
+      }
+    }
   }
 }
 
 .home {
   main {
     .intro {
-      padding-top: 0
+      padding-top: 0;
     }
   }
 }
@@ -90,7 +104,7 @@ footer {
   grid-area: footer;
   grid-column: 1/4;
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 15fr 1fr;
 
   @include breakpoints(tablet nav mobile) {
     max-width: 768px;

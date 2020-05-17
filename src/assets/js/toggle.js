@@ -1,31 +1,44 @@
-export function toggle() {
-  const titles = document.querySelectorAll('.toggle__title');
-  const bodies = document.querySelectorAll('.toggle__body');
+export const toggle = () => {
+    const list = document.getElementById("toggle__titles");
+    const children = list.childNodes;
 
-  titles.forEach((el, i) => {
-    el.addEventListener('click', (e) => {
+    children.forEach(el => {
 
-      if (e.target.classList.contains('active')) return
+        el.addEventListener("click", (e) => {
+            let elem = e.target;
+            let elemId = elem.dataset.id;
+            let titleArr = "";
+            let titleClass = "";
+            // Stage 1
+            let elemContent = "";
+            let contentClass = "";
+            let contentArr = "";
 
-      titles.forEach(el => {
-        if (el.classList.contains('active')) {
-          el.classList.remove('active');
-        }
-      })
+            if (elem.classList.contains("active")) return;
 
-      el.classList.add('active');
+            titleClass = '.' + elem.classList[0];
+            titleArr = document.querySelectorAll(titleClass);
 
-      let id = e.target.dataset.toggle;
+            titleArr.forEach((el) => {
+                if (el.classList.contains("active")) {
+                    el.classList.remove("active");
+                }
+            });
 
-      bodies.forEach(el => {
-        if (el.classList.contains('visible')) {
-          el.classList.remove('visible');
-        }
-      })
+            elem.classList.add("active");
 
-      let body = document.getElementById(id);
+            //Stage 2
+            elemContent = document.getElementById(elemId);
+            contentClass = '.' + elemContent.classList[0];
+            contentArr = document.querySelectorAll(contentClass);
 
-      body.classList.add('visible');
-    })
-  });
-}
+            contentArr.forEach(el => {
+                if (el.classList.contains("visible")) {
+                    el.classList.remove('visible');
+                }
+            })
+
+            elemContent.classList.add("visible");
+        });
+    });
+};
