@@ -27,7 +27,13 @@
           }
         }
 
-        .address {
+        .address__container {
+          .address {
+            margin-top: 1.45rem;
+            p {
+              margin: 0;
+            }
+          }
         }
 
         .phone__container,

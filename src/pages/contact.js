@@ -30,17 +30,20 @@ const contact = () => {
               </div>
 
               <div className="hours__container">
-                <h4 className="h3">Hours of Operation</h4>
+                <h4 className="h3">Hours of Operation:</h4>
                 <div className="hours">
                   <p><strong>Monday &mdash; Friday</strong>: 7:15 am - 5:00 pm</p>
                   <p><strong>Saturday</strong>: As necessary</p>
                 </div>
               </div>
 
-              <div className="address">
-                <p>600 Bel Air Boulevard Suite 130</p>
-                <p>Mobile AL 36606</p>
-                <p><a href="tel:2512855945">(251) 285-5945</a></p>
+              <div className="address__container">
+                <h4 className="h3">Find us:</h4>
+                <div className="address">
+                  <p>600 Bel Air Boulevard Suite 130</p>
+                  <p>Mobile AL 36606</p>
+                  <p><a href="tel:2512855945">(251) 285-5945</a></p>
+                </div>
               </div>
             </div>
           </div>

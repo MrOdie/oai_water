@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import { header } from '../../assets/js/header'
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/odonnellassociates_white.svg";
 import React from "react"
 
 class Header extends React.PureComponent {

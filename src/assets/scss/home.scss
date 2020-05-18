@@ -28,12 +28,18 @@
   }
 
   .grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, 350px);
     gap: 0.5rem 0.5rem;
     background-color: $alt-white;
     border-top: .5rem solid $alt-white;
     border-bottom: .5rem solid $alt-white;
+    @include breakpoints(really_big large desktop sm_desktop lg_tablet tablet){
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, 350px);
+    }
+    @include breakpoints(nav mobile){
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 250px);
+    }
 
     .grid-item {
       justify-self: stretch;
@@ -50,9 +56,9 @@
         opacity: 0;
       }
 
-      &:hover,
-      &:focus,
-      &:active {
+      @include breakpoints(nav mobile){
+        border-left: .5rem solid $alt-white;
+        border-right: .5rem solid $alt-white;
         &.unus,
         &.quot {
           background: map-get($oai-pallet, color4);
@@ -64,25 +70,53 @@
           background: map-get($oai-pallet, color1);
           color: $alt-white;
         }
+
+        &.unus {
+          grid-row-start: 2;
+        }
         .inner-item {
           opacity: 1;
+
+          .fa-3x {
+            margin-bottom: .5rem;
+          }
         }
       }
-
-      &.unus {
-        background: url("../images/research.jpg") no-repeat center/cover;
-      }
-
-      &.duo {
-        background: url("../images/development.jpg") no-repeat center/cover;
-      }
-
-      &.tres {
-        background: url("../images/management.jpg") no-repeat center/cover;
-      }
-
-      &.quot {
-        background: url("../images/image39.jpg") no-repeat center/cover;
+      
+      @include breakpoints(really_big large desktop sm_desktop lg_tablet tablet){
+        &:hover,
+        &:focus,
+        &:active {
+          &.unus,
+          &.quot {
+            background: map-get($oai-pallet, color4);
+            color: $alt-white;
+          }
+  
+          &.duo,
+          &.tres {
+            background: map-get($oai-pallet, color1);
+            color: $alt-white;
+          }
+          .inner-item {
+            opacity: 1;
+          }
+        }
+        &.unus {
+          background: url("../images/research.jpg") no-repeat center/cover;
+        }
+  
+        &.duo {
+          background: url("../images/development.jpg") no-repeat center/cover;
+        }
+  
+        &.tres {
+          background: url("../images/management.jpg") no-repeat center/cover;
+        }
+  
+        &.quot {
+          background: url("../images/image39.jpg") no-repeat center/cover;
+        }
       }
 
       h3 {

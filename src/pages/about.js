@@ -31,7 +31,7 @@ const AboutPage = () => (
           </div>
         </div>
         <div className="row">
-          <div className="col__left">
+          <div className="col__left nod">
             <img className="personnel__img" src={img} alt="Nell O'Donnell"/>
           </div>
           <div className="col__right">
@@ -44,7 +44,7 @@ const AboutPage = () => (
             <h5 className="h3">Dan O'Donnell, PG, Hydrogeologist</h5>
             <p>Dan, a 1979 graduate of Auburn University (BS Geology), has 39+ years of experience in a variety of geologic fields. He maintains professional geologist registrations in Alabama, Arkansas, Florida, Kentucky and Mississippi with Louisiana pending. He is responsible for the technical aspects of the firm. Since 1990, Dan's focus is hydrogeology; the research, exploration, development and management of groundwater resources. He has formal training in hydrogeology from Oklahoma State University and extensive experience with aquifers in the Coastal Plain. Outside of work, Dan is the past Grand Knight of Knights of Columbus Council #13085, is active in The Men of St. Joseph, Cursillo, and other church activities at St. Pius X Catholic Church. In his spare time he works very hard at spoiling his dog Jonas, being papa to little Daniel, Sammy, Irene and George and enjoys conducting research on three shallow aquifer wells in his back yard.</p>
           </div>
-          <div className="col__right">
+          <div className="col__right dod">
             <img className="personnel__img" src={img} alt="Dan O'Donnell"/>
           </div>
         </div>

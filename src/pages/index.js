@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLeanpub } from "@fortawesome/free-brands-svg-icons"
 import { faWrench } from "@fortawesome/free-solid-svg-icons"
 import { faTasks } from "@fortawesome/free-solid-svg-icons"
-import { faTintSlash } from "@fortawesome/free-solid-svg-icons"
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -53,10 +53,10 @@ const IndexPage = () => (
           <h3>Management</h3>
         </div>
       </Link>
-      <Link className="grid-item quot" to="/wastewater">
+      <Link className="grid-item quot" to="/exploration">
         <div className="inner-item">
-          <FontAwesomeIcon className="fa-3x" icon={faTintSlash} />
-          <h3>Wastewater</h3>
+          <FontAwesomeIcon className="fa-3x" icon={faSearch} />
+          <h3>Exploration</h3>
         </div>
       </Link>
     </section>

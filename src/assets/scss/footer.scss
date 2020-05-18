@@ -33,8 +33,12 @@ footer {
           display: flex;
           align-items: center;
           justify-content: space-around;
-          max-width: 350px;
+          max-width: 300px;
           margin: 0 auto;
+          
+          a {
+            color: $white;
+          }
         }
       }
     }
