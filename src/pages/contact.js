@@ -1,12 +1,17 @@
 import React from 'react';
 
 import Layout from '../components/layout';
+import Parallax from '../components/Parallax/Parallax';
 import SEO from '../components/seo';
+
 
 const contact = () => {
   return (
     <Layout page="contact">
       <SEO title="Contact" />
+
+      <Parallax></Parallax>
+
       <section className="intro">
         <div className="container">
           <div className="row">
@@ -28,23 +33,26 @@ const contact = () => {
                   </div>
                 </div>
               </div>
+              <div className="sub">
 
-              <div className="hours__container">
-                <h4 className="h3">Hours of Operation:</h4>
-                <div className="hours">
-                  <p><strong>Monday &mdash; Friday</strong>: 7:15 am - 5:00 pm</p>
-                  <p><strong>Saturday</strong>: As necessary</p>
+                <div className="address__container">
+                  <h4 className="h3">Find us:</h4>
+                  <div className="address">
+                    <p>600 Bel Air Boulevard Suite 130</p>
+                    <p>Mobile AL 36606</p>
+                    <p><a href="tel:2512855945">(251) 285-5945</a></p>
+                  </div>
                 </div>
+                <div className="hours__container">
+                  <h4 className="h3">Hours of Operation:</h4>
+                  <div className="hours">
+                    <p><strong>Monday &mdash; Friday</strong>: 7:15 am - 5:00 pm</p>
+                    <p><strong>Saturday</strong>: As necessary</p>
+                  </div>
+                </div>
+
               </div>
 
-              <div className="address__container">
-                <h4 className="h3">Find us:</h4>
-                <div className="address">
-                  <p>600 Bel Air Boulevard Suite 130</p>
-                  <p>Mobile AL 36606</p>
-                  <p><a href="tel:2512855945">(251) 285-5945</a></p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -55,7 +63,7 @@ const contact = () => {
             <div className="col contact__col">
               <div className="contact__form">
                 <h2 className="h1">Send Us A Message:</h2>
-                <form class="form" method="POST" data-netlify="true">
+                <form className="form" method="POST" data-netlify="true">
                   <div className="fields">
                     <div className="field half">
                       <input
@@ -100,7 +108,7 @@ const contact = () => {
                     <div className="field">
                       <div data-netlify-recaptca></div>
                     </div>
-                    <input type="submit" value="Send Message" class="submit" />
+                    <input type="submit" value="Send Message" className="submit" />
                   </div>
                 </form>
               </div>

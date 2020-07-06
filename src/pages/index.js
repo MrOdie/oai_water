@@ -29,7 +29,10 @@ const IndexPage = () => (
           <div className="col">
             <h3>Welcome to O'Donnell &amp; Associates, Inc.</h3>
 
-            <p>OAI is a woman-owned hydrogeologic consulting firm located in Mobile, Alabama (USA) that specializes in the research, exploration, development and management of groundwater resources. Through the Grace of God, hard work and quality services, OAI has grown to become the leading provider of professional hydrogeologic services to water systems (50+), engineering firms (23), industries (18), businesses (9) and irrigators (4) across the central Gulf Coast Region. OAI's unique combination of petroleum exploration experience coupled with formal hydrogeologic training sets us apart from others in the crowded hydrogeologic consulting community. With professional geologic experience dating from 1979, OAI welcomes you to our website and we look forward to addressing your water resource concerns with proven, cost effective solutions.</p>
+            <p>OAI is a woman-owned hydrogeologic consulting firm located in Mobile, Alabama (USA) that specializes in the research, exploration, development and management of groundwater resources.</p>
+            <p>Through the Grace of God, hard work and quality services, OAI has grown to become the leading provider of professional hydrogeologic services to water systems (50+), engineering firms (23), industries (18), businesses (9) and irrigators (4) across the central Gulf Coast Region.</p>
+            <p>OAI's unique combination of petroleum exploration experience coupled with formal hydrogeologic training sets us apart from others in the crowded hydrogeologic consulting community.</p>
+            <p>With professional geologic experience dating from 1979, OAI welcomes you to our website and we look forward to addressing your water resource concerns with proven, cost effective solutions.</p>
           </div>
         </div>
       </div>

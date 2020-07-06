@@ -18,20 +18,27 @@
           }
         }
 
-        .hours {
-          p:first-of-type {
-            margin-bottom: 0;
+        .sub {
+          display: grid;
+          @include breakpoints (really_big large desktop sm_desktop lg_tablet){
+          grid-template-columns: 1fr 1fr;
           }
-          p:not(:first-of-type) {
-            margin: 0;
-          }
-        }
-
-        .address__container {
-          .address {
+          .hours {
             margin-top: 1.45rem;
-            p {
+            p:first-of-type {
+              margin-bottom: 0;
+            }
+            p:not(:first-of-type) {
               margin: 0;
+            }
+          }
+  
+          .address__container {
+            .address {
+              margin-top: 1.45rem;
+              p {
+                margin: 0;
+              }
             }
           }
         }

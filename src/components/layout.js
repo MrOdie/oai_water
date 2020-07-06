@@ -6,6 +6,8 @@
  */
 
 import React from "react"
+import { ParallaxProvider } from 'react-scroll-parallax';
+
 import "../assets/font/typography.css"
 import "../assets/scss/style.scss"
 
@@ -16,11 +18,13 @@ const Layout = ({ children, page }) => {
 
   return (
     <>
-    <div className={page} id="body">
-      <Header/>
-      <main >{children}</main>
-      <Footer/>
-    </div>
+      <ParallaxProvider>
+        <div className={page} id="body">
+          <Header />
+          <main >{children}</main>
+          <Footer />
+        </div>
+      </ParallaxProvider>
     </>
   )
 }
