@@ -1,8 +1,9 @@
 import React from 'react';
 
 import Layout from '../components/layout';
-import Parallax from '../components/Parallax/Parallax';
+// import Parallax from '../components/Parallax/Parallax';
 import SEO from '../components/seo';
+import ParallaxContainer from '../components/Parallax/Parallax';
 
 
 const contact = () => {
@@ -10,7 +11,7 @@ const contact = () => {
     <Layout page="contact">
       <SEO title="Contact" />
 
-      <Parallax></Parallax>
+      <ParallaxContainer></ParallaxContainer>
 
       <section className="intro">
         <div className="container">
