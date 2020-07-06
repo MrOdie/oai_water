@@ -4,13 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLeanpub } from "@fortawesome/free-brands-svg-icons"
 import { faWrench } from "@fortawesome/free-solid-svg-icons"
 import { faTasks } from "@fortawesome/free-solid-svg-icons"
-import { faTintSlash } from "@fortawesome/free-solid-svg-icons"
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
-  <Layout>
+  <Layout page="home">
     <SEO title="Home" />
     <section className="intro">
       <div className="container">
@@ -23,13 +23,16 @@ const IndexPage = () => (
         </div>
       </div>
     </section>
-    <section className="sub">
+    <section className="sub__single">
       <div className="container">
         <div className="row">
           <div className="col">
             <h3>Welcome to O'Donnell &amp; Associates, Inc.</h3>
 
-            <p>OAI is a woman-owned hydrogeologic consulting firm located in Mobile, Alabama (USA) that specializes in the research, exploration, development and management of groundwater resources. Through the Grace of God, hard work and quality services, OAI has grown to become the leading provider of professional hydrogeologic services to water systems (50+), engineering firms (23), industries (18), businesses (9) and irrigators (4) across the central Gulf Coast Region. OAI's unique combination of petroleum exploration experience coupled with formal hydrogeologic training sets us apart from others in the crowded hydrogeologic consulting community. With professional geologic experience dating from 1979, OAI welcomes you to our website and we look forward to addressing your water resource concerns with proven, cost effective solutions.</p>
+            <p>OAI is a woman-owned hydrogeologic consulting firm located in Mobile, Alabama (USA) that specializes in the research, exploration, development and management of groundwater resources.</p>
+            <p>Through the Grace of God, hard work and quality services, OAI has grown to become the leading provider of professional hydrogeologic services to water systems (50+), engineering firms (23), industries (18), businesses (9) and irrigators (4) across the central Gulf Coast Region.</p>
+            <p>OAI's unique combination of petroleum exploration experience coupled with formal hydrogeologic training sets us apart from others in the crowded hydrogeologic consulting community.</p>
+            <p>With professional geologic experience dating from 1979, OAI welcomes you to our website and we look forward to addressing your water resource concerns with proven, cost effective solutions.</p>
           </div>
         </div>
       </div>
@@ -53,10 +56,10 @@ const IndexPage = () => (
           <h3>Management</h3>
         </div>
       </Link>
-      <Link className="grid-item quot" to="/wastewater">
+      <Link className="grid-item quot" to="/exploration">
         <div className="inner-item">
-          <FontAwesomeIcon className="fa-3x" icon={faTintSlash} />
-          <h3>Wastewater</h3>
+          <FontAwesomeIcon className="fa-3x" icon={faSearch} />
+          <h3>Exploration</h3>
         </div>
       </Link>
     </section>

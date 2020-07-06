@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "oai-water-inc",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Static site for a Hydrogeologic Consulting Firm",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Mr. Ohdee",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
@@ -18,11 +18,14 @@
     "gatsby-plugin-sharp": "^2.6.0",
     "gatsby-source-filesystem": "^2.3.0",
     "gatsby-transformer-sharp": "^2.5.0",
+    "gatsby-transformer-yaml": "^2.4.1",
     "node-sass": "^4.14.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0"
+    "react-helmet": "^6.0.0",
+    "react-html-parser": "^2.0.2",
+    "react-scroll-parallax": "^2.3.3"
   },
   "devDependencies": {
     "prettier": "2.0.5"
@@ -42,7 +45,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/MrOdie/oai_water"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

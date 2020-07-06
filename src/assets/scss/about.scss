@@ -1,0 +1,30 @@
+.about {
+  section {
+    &.sub__multi {
+      background-color: map-get($oai-pallet, color3);
+      color: $white;
+      padding: 30px 0;
+    }
+    .container {
+      .row {
+        .col {
+          &__left,
+          &__right {
+            &.dod {
+              grid-row-start: 1;
+            }
+            .personnel__img {
+              display: block;
+                @include breakpoints(really_big large desktop sm_desktop lg_tablet tablet){
+                  max-width: 350px;
+                }
+                @include breakpoints(nav mobile){
+                  max-width: 100%;
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+}

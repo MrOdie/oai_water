@@ -1,0 +1,130 @@
+.contact {
+  main {
+    .intro {
+      .col {
+        .phone {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: start;
+
+          &__row {
+            flex-grow: 2;
+            display: flex;
+            justify-content: start;
+
+            p {
+              flex-grow: 1;
+            }
+          }
+        }
+
+        .sub {
+          display: grid;
+          @include breakpoints (really_big large desktop sm_desktop lg_tablet){
+          grid-template-columns: 1fr 1fr;
+          }
+          .hours {
+            margin-top: 1.45rem;
+            p:first-of-type {
+              margin-bottom: 0;
+            }
+            p:not(:first-of-type) {
+              margin: 0;
+            }
+          }
+  
+          .address__container {
+            .address {
+              margin-top: 1.45rem;
+              p {
+                margin: 0;
+              }
+            }
+          }
+        }
+
+        .phone__container,
+        .address__container,
+        .hours__container {
+          h4 {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .sub__single {
+      .col {
+        &.contact__col {
+          .contact__form {
+            background-color: map-get($oai-pallet, color2);
+            border: 1px solid $text;
+            margin-bottom: 0.5rem;
+            padding: 1.5rem;
+            border-radius: 5px;
+            @include breakpoints(really_big large desktop sm_desktop tablet lg_tablet) {
+              width: 400px;
+            }
+            @include breakpoints(nav mobile) {
+              width: 80vw;
+            }
+
+            > h2 {
+              margin-top: 0;
+            }
+            .form {
+              width: 100%;
+
+              .fields {
+                width: inherit;
+                .field {
+                  width: inherit;
+                  .input,
+                  .message {
+                    width: inherit;
+                    border: 1px solid $text;
+                    border-radius: 5px;
+                    margin-bottom: 0.5rem;
+                    font-family: "Montserrat Regular", Georgia;
+                    font-size: 1rem;
+                    background-color: rgba(255, 255, 255, 0.75);
+                    font-weight: 700;
+                    color: $text;
+                  }
+
+                  .input {
+                    padding-left: 0.5rem;
+                    line-height: 2.5;
+                  }
+
+                  .message {
+                    padding: 0.5rem;
+                    resize: none;
+                  }
+                }
+
+                .submit {
+                  width: inherit;
+                  background-color: map-get($oai-pallet, color3);
+                  border: 1px solid map-get($oai-pallet, color3);
+                  border-radius: 5px;
+                  padding: 1rem 0.5rem;
+                  color: $white;
+                  font-size: 1.5rem;
+                  font-family: "Montserrat SemiBold", Georgia;
+                  cursor: pointer;
+
+                  &:hover,
+                  &:active,
+                  &:focus {
+                    background-color: #404255;
+                    border: 1px solid #404255;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

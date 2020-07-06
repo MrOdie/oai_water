@@ -11,9 +11,34 @@ footer {
             margin: 0;
           }
         }
+        .address {
+          margin: 1.45rem;
+          p {
+            margin: 0;
+            a {
+              color: $white;
+              text-decoration: none;
+              cursor: pointer;
+
+              &:hover,
+              &:focus,
+              &:active {
+                color: $alt-white;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
         .info {
           display: flex;
           align-items: center;
+          justify-content: space-around;
+          max-width: 300px;
+          margin: 0 auto;
+          
+          a {
+            color: $white;
+          }
         }
       }
     }

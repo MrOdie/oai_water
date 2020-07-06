@@ -1,7 +1,14 @@
 @import './misc/misc.scss';
 @import './mixins/mixins.scss';
 @import './layout/layout.scss';
-@import './index.scss';
+
+@import './modules/toggle.scss';
+@import './modules/accordion.scss';
+@import './parallax.scss';
+
+@import './home.scss';
+@import './contact.scss';
+@import './about.scss';
 @import './footer.scss';
 
 body,html {

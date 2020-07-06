@@ -6,21 +6,25 @@
  */
 
 import React from "react"
+import { ParallaxProvider } from 'react-scroll-parallax';
+
 import "../assets/font/typography.css"
 import "../assets/scss/style.scss"
 
-import Header from "./header"
-import Footer from "./footer"
+import Header from "./partials/header"
+import Footer from "./partials/footer"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, page }) => {
 
   return (
     <>
-    <div id="body">
-      <Header/>
-      <main >{children}</main>
-      <Footer/>
-    </div>
+      <ParallaxProvider>
+        <div className={page} id="body">
+          <Header />
+          <main >{children}</main>
+          <Footer />
+        </div>
+      </ParallaxProvider>
     </>
   )
 }
