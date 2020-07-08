@@ -12,6 +12,8 @@ main {
   grid-area: body;
   grid-column: 1/4;
 
+  padding-top: 70px;
+
   section {
     display: grid;
     @include breakpoints(really_big large desktop sm_desktop lg_tablet tablet) {

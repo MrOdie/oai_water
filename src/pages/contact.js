@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 // import Parallax from '../components/Parallax/Parallax';
 import SEO from '../components/seo';
 import ParallaxContainer from '../components/Parallax/Parallax';
+import Imagetest from '../components/Image';
 
 
 const contact = () => {
