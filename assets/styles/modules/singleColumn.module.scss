@@ -1,0 +1,250 @@
+@use "../mixins/breakpoints.scss" as *;
+@use "../misc/colors.scss" as *;
+
+.section {
+    @include breakpoints(nav mobile) {
+        grid-template-columns: 1fr 15fr 1fr;
+    }
+
+    &.homeIntro {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+
+        @include breakpoints(
+            really_big large sm_desktop desktop lg_tablet tablet
+        ) {
+            background-image: url(../../images/homepage-intro-bg-large.jpg);
+        }
+        @include breakpoints(mobile nav) {
+            background-image: url(../../images/homepage-intro-bg-small.jpg);
+        }
+
+        &::after {
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.25));
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .Container {
+            height: inherit;
+
+            .Row {
+                height: inherit;
+
+                .Col {
+                    height: inherit;
+                }
+            }
+        }
+    }
+
+    &.aboutIntro,
+    &.professionalIntro,
+    &.servicesIntro {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include breakpoints(really_big large sm_desktop desktop) {
+            height: 100vh;
+        }
+        @include breakpoints(lg_tablet tablet mobile nav) {
+        }
+    }
+
+    &.professionalIntro {
+        .Col {
+            display: grid;
+            grid-template-rows: auto;
+            @include breakpoints(really_big large desktop sm_desktop) {
+                grid-template-columns: 2fr 3fr;
+            }
+            @include breakpoints(lg_tablet tablet nav mobile) {
+                grid-template-columns: 1fr;
+                background-color: $white;
+                padding: 1.5rem;
+            }
+        }
+    }
+
+    &.aboutIntro {
+        .Col {
+            display: grid;
+            @include breakpoints(really_big large desktop) {
+                grid-template-columns: 2fr 1fr;
+            }
+
+            @include breakpoints(large desktop sm_desktop) {
+                grid-template-columns: 2fr 2fr;
+            }
+
+            @include breakpoints(lg_tablet tablet nav mobile) {
+                grid-template-columns: 1fr;
+                background-color: $white;
+                padding: 1.5rem;
+                border-radius: 5px;
+            }
+        }
+        @include breakpoints(
+            really_big large sm_desktop desktop lg_tablet tablet
+        ) {
+            background-image: url(../../images/about-intro-bg-large.jpg);
+        }
+        @include breakpoints(mobile nav) {
+            background-image: url(../../images/about-intro-bg-small.jpg);
+        }
+    }
+
+    @include breakpoints(really_big large sm_desktop desktop lg_tablet tablet) {
+        &.professionalIntro {
+            background-image: url(../../images/professional-intro-bg-large.jpg);
+        }
+
+        &.servicesIntro {
+            background-image: url(../../images/services-intro-bg-large.jpg);
+        }
+
+        &.clientsIntro {
+            background: url(../../images/clients-intro-bg-large.jpg) center/cover no-repeat;
+        }
+
+        &.contactIntro {
+            background: url(../../images/contact-intro-bg-large.jpg) center/cover no-repeat;
+        }
+
+        &.clientsIntro,
+        &.contactIntro {
+            display: block;
+            min-height: 460px;
+        }
+    }
+    @include breakpoints(mobile nav) {
+        &.professionalIntro {
+            background-image: url(../../images/professional-intro-bg-small.jpg);
+        }
+
+        &.servicesIntro {
+            background-image: url(../../images/services-intro-bg-small.jpg);
+        }
+
+        &.clientsIntro {
+            background: url(../../images/clients-intro-bg-small.jpg) center/cover no-repeat;
+        }
+
+        &.contactIntro {
+            background: url(../../images/contact-intro-bg-small.jpg) center/cover no-repeat;
+        }
+    }
+
+    &.homeQuote,
+    &.aboutQuote {
+        background-color: map-get($odiePallet, color5);
+    }
+
+    &.homeAnnouncement {
+        background-color: map-get($odiePallet, color4);
+        color: $white;
+    }
+
+    &.aboutColumns {
+        .Col {
+            @include breakpoints(really_big large sm_desktop desktop) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0 3rem;
+            }
+
+            @include breakpoints(lg_tablet tablet nav mobile) {
+                display: flex;
+                flex-flow: column nowrap;
+                background-color: $white;
+                padding: 1.5rem;
+            }
+        }
+    }
+
+    &.costSection {
+        .Col {
+            display: grid;
+            gap: 0 3rem;
+
+            @include breakpoints(really_big large sm_desktop desktop){
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+            @include breakpoints(lg_tablet tablet nav mobile){
+                grid-template-columns: 1fr;
+
+            }
+        }
+    }
+
+    .Container {
+        grid-column: 2;
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: 1fr 10fr 1fr;
+
+        @include breakpoints(lg_tablet tablet) {
+            max-width: 750px;
+        }
+
+        .Row {
+            grid-column: 2;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+
+            @include breakpoints(really_big large desktop sm_desktop) {
+                grid-template-columns: 1fr 8fr 1fr;
+                margin: 70px 0;
+            }
+            @include breakpoints(lg_tablet tablet nav mobile) {
+                grid-template-columns: 1fr;
+                margin: 50px 0;
+            }
+            .Col {
+                display: grid;
+                width: 100%;
+
+                .ParentSplit {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 2rem 0;
+                }
+                @include breakpoints(really_big large desktop sm_desktop) {
+                    grid-column: 2;
+
+                    &__left {
+                        grid-column-start: 1;
+                    }
+                    &__right {
+                        grid-column-start: 2;
+                    }
+                }
+                @include breakpoints(lg_tablet tablet nav mobile) {
+                    grid-column: 1;
+                }
+                &__left,
+                &__right {
+                    @include breakpoints(lg_tablet tablet nav mobile) {
+                        grid-column: 1/3;
+                    }
+                }
+            }
+        }
+    }
+
+    &.contactInfo {
+        .ParentSplit {
+            grid-template-columns: 1fr 5fr 5fr 1fr;
+            gap: 1rem;
+        }
+    }
+}

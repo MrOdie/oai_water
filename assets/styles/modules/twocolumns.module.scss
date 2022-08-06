@@ -1,0 +1,71 @@
+@use '../misc/colors.scss' as *;
+@use "../mixins/breakpoints.scss" as *;
+
+.section {
+    @include breakpoints(nav mobile) {
+        grid-template-columns: 1fr 15fr 1fr;
+    }
+    .Container {
+        display: grid;
+        grid-column: 2;
+        grid-template-columns: 1fr 10fr 1fr;
+        gap: 2rem 0;
+
+        .Row {
+            grid-column: 2;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+
+            @include breakpoints(really_big large desktop sm_desktop) {
+                grid-template-columns: 1fr 5fr 5fr 1fr;
+                margin: 70px 0;
+                gap: 0 2rem;
+            }
+            @include breakpoints(lg_tablet tablet nav mobile) {
+                grid-template-columns: 1fr;
+                margin: 50px 0;
+            }
+            .ColLeft {
+                grid-column: 2;
+                align-self: flex-start;
+            }
+
+            .ColRight {
+                grid-column: 3;
+            }
+        }
+    }
+
+    &.contactInfo {
+        .Row {
+            background-color: map-get($odiePallet, color2);
+            color: $white;
+            padding: 3rem;
+            border-radius: 5px;
+
+            @include breakpoints(really_big large desktop sm_desktop) {
+                grid-template-columns: 5fr 5fr;
+                margin: 70px 0;
+                gap: 0 2rem;
+
+                .ColLeft {
+                    grid-column: 1;
+                }
+    
+                .ColRight {
+                    grid-column: 2;
+                }
+            }
+            @include breakpoints(lg_tablet tablet nav mobile){
+                grid-template-columns: 1fr;
+                gap: 2rem 0;
+
+                .ColLeft,
+                .ColRight {
+                    grid-column: 1;
+                }
+            }
+        }
+    }
+}

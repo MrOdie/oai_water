@@ -1,0 +1,50 @@
+@use "../mixins/breakpoints.scss" as *;
+@use "../misc/colors.scss" as *;
+
+.homeRight {
+    position: relative;
+    @include breakpoints(really_big large desktop sm_desktop) {
+        grid-column: 3;
+    }
+    @include breakpoints(lg_tablet tablet nav mobile) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+.aboutRight {
+    
+    @include breakpoints(really_big large desktop sm_desktop) {
+        grid-column: 3;
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+    }
+    @include breakpoints(lg_tablet tablet nav mobile) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+.contactRight {
+        @include breakpoints(really_big large desktop sm_desktop) {
+        grid-column: 3;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    @include breakpoints(lg_tablet tablet nav mobile) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+.professionalIntroRight,
+.rightCostSection {
+    @include breakpoints(really_big large desktop sm_desktop) {
+        grid-column: 2;
+    }
+    @include breakpoints(lg_tablet tablet nav mobile) {
+        grid-column: 1;
+    }
+}
