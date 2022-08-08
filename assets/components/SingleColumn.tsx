@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {ReactNode} from "react";
 
 import classes from '../styles/modules/singleColumn.module.scss';
 
-const Structure = ({sectionId, children}) => {
+interface Props {
+    sectionId: string;
+    children: ReactNode;
+}
+const SingleColumn: React.FC<Props> = ({sectionId, children}) => {
   return (
     <section id={sectionId} className={(sectionId ? classes[sectionId] : '') + " " + classes.section}>
       <div className={classes.Container}>
@@ -16,4 +20,4 @@ const Structure = ({sectionId, children}) => {
   )
 }
 
-export default Structure;
+export default SingleColumn;

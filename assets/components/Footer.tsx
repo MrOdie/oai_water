@@ -1,20 +1,20 @@
-import * as React from 'react';
+import React from "react";
 import Link from 'next/link';
 import SingleColumn from './SingleColumn';
 import classes from '../styles/modules/footer.module.scss';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   const currentYear = new Date();
   return (
     <>
       <footer className={classes.footer}>
-        <SingleColumn sectionId="footer" isSplit={false}>
+        <SingleColumn sectionId="footer">
 
           <div className={classes.header}>
             <h6 className="h1">
               O&#39;Donnell &amp; Associates Inc.
             </h6>
-            <p className="h3">Mobile, A</p>
+            <p className="h3">Mobile, AL</p>
           </div>
 
           <div className={classes.navigation}>

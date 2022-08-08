@@ -58,6 +58,11 @@ h6 {
   @extend %h6;
 }
 
+.section-heading {
+  border-left: 8px solid map-get($odiePallet, "color4");
+  padding-left: 8px;
+}
+
 a {
   color: $text;
 }

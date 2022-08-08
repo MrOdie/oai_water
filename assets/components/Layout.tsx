@@ -1,15 +1,15 @@
-import {NextPage} from "next";
+import React, {ReactNode} from "react";
 
-import Footer from "../components/Footer";
+import Footer from "./Footer";
 import Header from "./Header";
-import {ReactNode} from "react";
+
 
 interface Props {
     page: string;
     children: ReactNode;
 }
 
-const Layout: NextPage<Props> = ({ page, children }) => {
+const Layout: React.FC<Props> = ({ page, children }) => {
 
   return (
     <>
