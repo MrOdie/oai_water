@@ -63,6 +63,13 @@ h6 {
   padding-left: 8px;
 }
 
+.headline {
+  color: $white;
+  text-shadow: 3px 3px 1px $text;
+  font-size: 2rem;
+  margin: 0;
+}
+
 a {
   color: $text;
 }

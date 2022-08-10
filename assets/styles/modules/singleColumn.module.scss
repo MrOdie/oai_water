@@ -1,139 +1,13 @@
 @use "../mixins/breakpoints.scss" as *;
 @use "../misc/colors.scss" as *;
 
-.section {
+.Section {
   @include breakpoints(nav mobile) {
     grid-template-columns: 1fr 15fr 1fr;
   }
 
-  &.homeIntro {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-
-    &::after {
-      background: linear-gradient(transparent, rgba(0, 0, 0, 0.25));
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
-
-    .Container {
-      height: inherit;
-
-      .Row {
-        height: inherit;
-
-        .Col {
-          height: inherit;
-        }
-      }
-    }
-  }
-
-  &.aboutIntro,
-  &.professionalIntro,
-  &.servicesIntro {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    @include breakpoints(really_big large sm_desktop desktop) {
-      height: 100vh;
-    }
-    @include breakpoints(lg_tablet tablet mobile nav) {
-    }
-  }
-
-  &.professionalIntro {
-    .Col {
-      display: grid;
-      grid-template-rows: auto;
-      @include breakpoints(really_big large desktop sm_desktop) {
-        grid-template-columns: 2fr 3fr;
-      }
-      @include breakpoints(lg_tablet tablet nav mobile) {
-        grid-template-columns: 1fr;
-        background-color: $white;
-        padding: 1.5rem;
-      }
-    }
-  }
-
-  &.aboutIntro {
-    .Col {
-      display: grid;
-      @include breakpoints(really_big large desktop) {
-        grid-template-columns: 2fr 1fr;
-      }
-
-      @include breakpoints(large desktop sm_desktop) {
-        grid-template-columns: 2fr 2fr;
-      }
-
-      @include breakpoints(lg_tablet tablet nav mobile) {
-        grid-template-columns: 1fr;
-        background-color: $white;
-        padding: 1.5rem;
-        border-radius: 5px;
-      }
-    }
-  }
-
-  @include breakpoints(really_big large sm_desktop desktop lg_tablet tablet) {
-
-    &.clientsIntro,
-    &.contactIntro {
-      display: block;
-      min-height: 460px;
-    }
-  }
-
-  &.homeQuote,
-  &.aboutQuote {
-    background-color: map-get($odiePallet, color5);
-  }
-
-  &.homeAnnouncement {
-    background-color: map-get($odiePallet, color4);
-    color: $white;
-  }
-
-  &.aboutColumns {
-    .Col {
-      @include breakpoints(really_big large sm_desktop desktop) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0 3rem;
-      }
-
-      @include breakpoints(lg_tablet tablet nav mobile) {
-        display: flex;
-        flex-flow: column nowrap;
-        background-color: $white;
-        padding: 1.5rem;
-      }
-    }
-  }
-
-  &.costSection {
-    .Col {
-      display: grid;
-      gap: 0 3rem;
-
-      @include breakpoints(really_big large sm_desktop desktop) {
-        grid-template-columns: 1fr 1fr;
-
-      }
-
-      @include breakpoints(lg_tablet tablet nav mobile) {
-        grid-template-columns: 1fr;
-
-      }
-    }
+  #home-welcome {
+    display: none;
   }
 
   .Container {
@@ -192,13 +66,6 @@
           }
         }
       }
-    }
-  }
-
-  &.contactInfo {
-    .ParentSplit {
-      grid-template-columns: 1fr 5fr 5fr 1fr;
-      gap: 1rem;
     }
   }
 }

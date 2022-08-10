@@ -15,7 +15,7 @@ const Home: NextPage = () => {
             </Head>
             <Layout page={"home"}>
 
-                <Banner image={bannerImage} />
+                <Banner sectionId={"home-banner"} image={bannerImage} headline={"Hydrogeologic Consulting"} subHeadline={"Research Exploration Development Management"}/>
 
                 <SingleColumn sectionId={"home-welcome"}>
                     <h2 className="section-heading h1">Welcome to O&#39;Donnell &amp; Associates</h2>

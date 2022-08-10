@@ -29,9 +29,6 @@ const Header: NextPage<Props> = ({originPage}) => {
     const checkScrollOffset = (num: Number) => {
         if (header instanceof HTMLHeadingElement) {
             num > 10 ? header.classList.add('scrolled') : header.classList.remove('scrolled');
-        } else {
-            console.log("NO HEADER");
-            return false;
         }
     };
 

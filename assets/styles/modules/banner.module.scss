@@ -1,0 +1,47 @@
+@use "../mixins/breakpoints.scss" as *;
+@use "../misc/colors.scss" as *;
+
+.home-banner {
+  @include breakpoints(really_big large) {
+    background-image: url("/homepage_2500px.jpeg");
+  }@include breakpoints(desktop sm_desktop) {
+    background-image: url("/homepage_1800px.jpg");
+  }@include breakpoints(lg_tablet tablet nav) {
+    background-image: url("/homepage_950px.jpg");
+  }@include breakpoints(mobile) {
+    background-image: url("/homepage_950px.jpg");
+  }
+
+  display: block;
+  position: relative;
+  padding-top: 70px;
+
+  .headline,
+  .subHeadline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    color: #eee;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 70px;
+  }
+
+  .headline{
+
+    &::after {
+      content: "";
+      width: 2.5rem;
+      height: 5px;
+      position: absolute;
+      color: green;
+    }
+  }
+
+  .image {
+    display: block;
+  }
+}

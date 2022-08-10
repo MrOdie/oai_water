@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const path = require('path');
-
 const securityHeaders = [
   {
     key: 'X-DNS-Prefetch-Control',
@@ -27,9 +26,13 @@ const securityHeaders = [
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  trailingSlash: true,
+  devIndicators: {
+    buildActivityPosition: 'bottom-right',
+  },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   }
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;

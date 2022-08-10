@@ -8,7 +8,7 @@ interface Props {
 }
 const SingleColumn: React.FC<Props> = ({sectionId, children}) => {
   return (
-    <section id={sectionId} className={(sectionId ? classes[sectionId] : '') + " " + classes.section}>
+    <section id={classes[sectionId]} className={classes.Section}>
       <div className={classes.Container}>
         <div className={classes.Row}>
           <div className={classes.Col}>
