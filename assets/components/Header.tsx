@@ -3,61 +3,35 @@ import {header} from "../js/header";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../images/odonnellassociates_white.svg";
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
+import {useScrollPosition} from "@n8tb1t/use-scroll-position";
 
 interface Props {
     originPage: string;
 }
 
 const Header: NextPage<Props> = ({originPage}) => {
-    const [offset, setOffset] = useState(0);
-    let body: HTMLBodyElement | null, menu_btn: HTMLInputElement | null, header: HTMLHeadingElement | null;
-
-    useEffect(() => {
-        body = document.querySelector("body");
-        menu_btn = document.querySelector("#menu-btn");
-        header = document.querySelector('.main-header');
-
-        window.onscroll = () => {
-            setOffset(window.pageYOffset);
-        };
-
-        checkScrollOffset(offset);
-
+    const [headerStyle, setHeaderStyle] = useState({
+        height: '70px',
+        transition: 'all 200ms ease-in'
     });
 
-    const checkScrollOffset = (num: Number) => {
-        if (header instanceof HTMLHeadingElement) {
-            num > 10 ? header.classList.add('scrolled') : header.classList.remove('scrolled');
-        }
-    };
+    useScrollPosition(({prevPos, currPos}) => {
 
-    const toggleHeader = () => {
-        if (body instanceof HTMLBodyElement) {
-            !body.classList.contains("no-scroll")
-                ? body.classList.add("no-scroll")
-                : body.classList.remove("no-scroll");
-        }
-    };
+        const hasScrolled = currPos.y > prevPos.y;
 
-    const toggleMenuFromNav = () => {
-        if (menu_btn instanceof HTMLInputElement) {
-
-            if (menu_btn.checked) {
-                menu_btn.checked = false;
-            }
+        const shouldBeStyle = {
+            height: hasScrolled ? '70px' : '60px',
+            transition: `all 200ms ${hasScrolled ? 'ease-in' : 'ease-out'}`,
         }
 
-        if (body instanceof HTMLBodyElement) {
+        if (JSON.stringify(shouldBeStyle) === JSON.stringify(headerStyle)) return;
 
-            if (body.classList.contains("no-scroll")) {
-                body.classList.remove("no-scroll");
-            }
-        }
-    };
+        setHeaderStyle(shouldBeStyle);
+    }, [headerStyle]);
 
     return (
-        <header id={`${originPage}-page`} className="main-header">
+        <header id={`${originPage}-page`} className="main-header" style={headerStyle}>
             <div className="logo">
                 <Link href="/">
                     <a className="site-logo-link">
@@ -77,7 +51,6 @@ const Header: NextPage<Props> = ({originPage}) => {
                 type="checkbox"
                 id="menu-btn"
                 className="menu-btn"
-                onClick={toggleHeader}
             />
             <label htmlFor="menu-btn" className="menu-icon">
                 <p className="hidden">Menu Button</p>
@@ -87,17 +60,17 @@ const Header: NextPage<Props> = ({originPage}) => {
                 <ul>
                     <li className="nav-link">
                         <Link href="/about">
-                            <a onClick={toggleMenuFromNav}>About</a>
+                            <a>About</a>
                         </Link>
                     </li>
                     <li className="nav-link">
                         <Link href="/services">
-                            <a onClick={toggleMenuFromNav}>Services</a>
+                            <a>Services</a>
                         </Link>
                     </li>
                     <li className="nav-link">
                         <Link href="/contact">
-                            <a onClick={toggleMenuFromNav}>Contact</a>
+                            <a>Contact</a>
                         </Link>
                     </li>
                 </ul>

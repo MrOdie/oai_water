@@ -2,22 +2,35 @@
 @use "../misc/colors.scss" as *;
 
 .home-banner {
-  @include breakpoints(really_big large) {
-    background-image: url("/homepage_2500px.jpeg");
-  }@include breakpoints(desktop sm_desktop) {
-    background-image: url("/homepage_1800px.jpg");
-  }@include breakpoints(lg_tablet tablet nav) {
-    background-image: url("/homepage_950px.jpg");
-  }@include breakpoints(mobile) {
-    background-image: url("/homepage_950px.jpg");
-  }
-
+  min-height: 650px;
   display: block;
   position: relative;
-  padding-top: 70px;
 
-  .headline,
-  .subHeadline {
+  @include breakpoints(really_big) {
+    background: url(/banners/home_banner_1750.jpg) no-repeat center/cover;
+  }
+  @include breakpoints(large desktop sm_desktop lg_tablet) {
+    background: url(/banners/home_banner_1200.jpg) no-repeat center/cover;
+  }
+  @include breakpoints(tablet) {
+    background-image: url(/banners/home_banner_950.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 500px;
+  }
+  @include breakpoints(nav) {
+    background-image: url(/banners/home_banner_950.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 400px;
+  }
+  @include breakpoints(mobile) {
+    background-image: url(/banners/home_banner_500.jpg);
+    background-size: contain;
+    min-height: 265px;
+  }
+
+  .headlineParent {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -27,21 +40,37 @@
     color: #eee;
     margin: 0 auto;
     text-align: center;
-    padding-top: 70px;
   }
 
-  .headline{
+  .headline {
+    color: $white;
+    text-shadow: 0px 0px 4px #333;
+    font-size: 2rem;
+    margin: 0;
+    position: relative;
+    padding-bottom: 30px;
 
     &::after {
       content: "";
-      width: 2.5rem;
+      width: 5rem;
       height: 5px;
       position: absolute;
-      color: green;
+      display: block;
+      z-index: 55555555;
+      background: #8DA7BE;
+      text-align: center;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
-  .image {
-    display: block;
+  .subHeadline {
+    text-shadow: 0px 0px 4px $text;
+    font-size: 1.25rem;
+    font-weight: bold;
   }
+
 }

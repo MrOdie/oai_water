@@ -5,8 +5,6 @@ import SingleColumn from "../assets/components/SingleColumn";
 import Blockquote from "../assets/components/partials/Blockquote";
 import Banner from "../assets/components/Banner";
 
-import bannerImage from "../assets/images/homepage_2500px.jpeg";
-
 const Home: NextPage = () => {
     return (
         <>
@@ -15,7 +13,7 @@ const Home: NextPage = () => {
             </Head>
             <Layout page={"home"}>
 
-                <Banner sectionId={"home-banner"} image={bannerImage} headline={"Hydrogeologic Consulting"} subHeadline={"Research Exploration Development Management"}/>
+                <Banner sectionId={"home-banner"} headline={"Hydrogeologic Consulting"} subHeadline={"Research — Exploration — Development — Management"}/>
 
                 <SingleColumn sectionId={"home-welcome"}>
                     <h2 className="section-heading h1">Welcome to O&#39;Donnell &amp; Associates</h2>

@@ -62,13 +62,32 @@ h6 {
   border-left: 8px solid map-get($odiePallet, "color4");
   padding-left: 8px;
 }
-
-.headline {
-  color: $white;
-  text-shadow: 3px 3px 1px $text;
-  font-size: 2rem;
-  margin: 0;
-}
+//
+//.headline {
+//  color: $white;
+//  text-shadow: 0px 0px 4px #333;
+//  font-size: 2rem;
+//  margin: 0;
+//  position: relative;
+//  padding-bottom: 30px;
+//
+//  &::after {
+//    content: "";
+//    width: 5rem;
+//    height: 5px;
+//    position: absolute;
+//    color: green;
+//    display: block;
+//    z-index: 55555555;
+//    background: green;
+//    text-align: center;
+//    margin: 0 auto;
+//    left: 50%;
+//    bottom: 0;
+//    transform: translate(-50%, 50%);
+//    margin-bottom: 6px;
+//  }
+//}
 
 a {
   color: $text;
